@@ -11,9 +11,11 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Header: typeof import('./components/Header.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
-    InProccessTask: typeof import('./components/InProccessTask.vue')['default']
-    MainPage: typeof import('./components/MainPage.vue')['default']
+    InProccessTask: typeof im./components/pages/MainPage.vuecessTask.vue')['default']
+    MainPage: typeof import('./components/pages/MainPage.vue')['default']
+    NotesPage: typeof import('./components/pages/NotesPage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Task: typeof import('./components/Task.vue')['default']

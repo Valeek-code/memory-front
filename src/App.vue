@@ -1,13 +1,11 @@
 <template>
-    <!-- header TODO -->
-    <v-container class="header">
-        <p>123</p>
-    </v-container>
-    <MainPage />
+  <HeaderComponent />
+  <RouterView />
 </template>
 
 <script lang="ts" setup>
-import MainPage from '@/components/MainPage.vue';
+  import { RouterView } from 'vue-router'
+  import HeaderComponent from '@/components/Header.vue'
 </script>
 
 <style>

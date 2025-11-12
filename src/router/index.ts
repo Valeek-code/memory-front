@@ -4,9 +4,24 @@
  * Automatic routes for `./src/pages/*.vue`
  */
 
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 // Composables
-import { createRouter, createWebHistory } from 'vue-router'
-import { routes } from 'vue-router/auto-routes'
+import MainPage from '@/components/pages/MainPage.vue'
+import NotesPage from '@/components/pages/NotesPage.vue'
+
+const routes: Array<RouteRecordRaw> = [
+  {
+    name: 'Main',
+    path: '/',
+    component: MainPage,
+  },
+  {
+    name: 'Notes',
+    path: '/notes',
+    component: NotesPage,
+  },
+
+]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
