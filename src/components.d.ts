@@ -11,6 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    FilesVaultPage: typeof import('./components/pages/FilesVaultPage.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     InProccessTask: typeof im./components/pages/MainPage.vuecessTask.vue')['default']
