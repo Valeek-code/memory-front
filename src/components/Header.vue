@@ -8,18 +8,22 @@
       </v-container>
       <v-container class="icon-container">
         <a href="/notes">
-          <img href="#/notes" class="icon" src="@/assets/notes_icon.svg" />
+          <img class="icon" src="@/assets/notes_icon.svg" />
         </a>
       </v-container>
       <v-container class="icon-container">
         <a href="/files">
-        <img class="icon" src="@/assets/files_icon.svg" />
+          <img class="icon" src="@/assets/files_icon.svg" />
         </a>
       </v-container>
     </v-row>
-    <v-col class="search-container">
+    <!-- <v-col class="search-container">
       <input v-model="message" placeholder="найти..." style="width: 100%; padding: 10px;" />
-    </v-col style="max-height: 100%;">
+      
+    </v-col style="max-height: 100%;"> -->
+    <v-col cols="6">
+    <inputCustom field/>
+    </v-col>
     <v-container class="icon-container">
       <img class="icon" src="@/assets/calendar_icon.svg" />
     </v-container>
@@ -27,13 +31,14 @@
 </template>
 
 <script>
+import inputCustom from './inputCustom.vue';
+
 
 </script>
 
 <style scoped>
-
 .header {
-  max-height: 54px;
+  max-height: 524px;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
@@ -55,21 +60,35 @@
 }
 
 .icon-container {
-  /* background: aqua;
-overflow:hidden; */
   padding: 0px;
   margin: 0px;
   max-width: 35px;
   max-height: 100%;
+  /* background: aqua; */
+  /* mix-blend-mode: color; */
+
+
 }
 
-.icon {
+/* .icon {
   width: 100%;
+  mix-blend-mode: color;
+  overflow: hidden;
+  background: aqua;
   height: 100%;
   margin: 0%;
   color: transparent;
-}
+} */
 
+.icon {
+  width: 100%;
+  background-size: cover;
+/* overflow:hidden; */
+  height: 100%;
+  margin: 0%;
+  /* color: transparent; */
+  /* opacity: 0; */
+}
 .search-container {
   max-width: 500px;
   max-height: 100%;
