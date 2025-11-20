@@ -22,10 +22,12 @@
       
     </v-col style="max-height: 100%;"> -->
     <v-col cols="6">
-    <inputCustom field/>
+      <inputCustom field />
     </v-col>
     <v-container class="icon-container">
-      <img class="icon" src="@/assets/calendar_icon.svg" />
+      <a href="/test_page">
+        <img class="icon" src="@/assets/calendar_icon.svg" />
+      </a>
     </v-container>
   </v-container>
 </template>
@@ -83,12 +85,13 @@ import inputCustom from './inputCustom.vue';
 .icon {
   width: 100%;
   background-size: cover;
-/* overflow:hidden; */
+  /* overflow:hidden; */
   height: 100%;
   margin: 0%;
   /* color: transparent; */
   /* opacity: 0; */
 }
+
 .search-container {
   max-width: 500px;
   max-height: 100%;

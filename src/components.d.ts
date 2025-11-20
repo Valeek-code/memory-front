@@ -11,6 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    __TestPage__: typeof import('./components/__TestPage__.vue')['default']
     FilesVaultPage: typeof import('./components/pages/FilesVaultPage.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
@@ -22,6 +23,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Task: typeof import('./components/Task.vue')['default']
+    TestPage: typeof import('./components/__TestPage__.vue')['default']
     TodayTask: typeof import('./components/TodayTask.vue')['default']
   }
 }

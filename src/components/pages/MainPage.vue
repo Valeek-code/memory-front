@@ -1,63 +1,67 @@
 <template>
-  <v-container>
-    <v-container class="task-card">
-      <v-container class="container-head">
-        <p>Задачи на сегодня</p>
-      </v-container>
-      <v-container class="task-container">
-        <Task :items="todayTasks" />
-      </v-container>
-      <v-container v-if="EnableTomorrowTasks" class="task-container">
-        <Task :items="tomorrowTasks" />
-      </v-container>
-      <v-container class="tomorrow-task" @click="SwitchTomorrowTasksEnable">
-         {{ EnableTomorrowTasks ? 'Скрыть задачи на завтра' : 'Посмотреть задачи на завтра'}}
-      </v-container>
+  <v-container class="task-card">
+    <v-container class="container-head">
+      <p>Задачи на сегодня</p>
+    </v-container>
+    <v-container class="task-container">
+      <Task :items="todayTasks" />
     </v-container>
 
-    <!-- <v-container class="task-card">
-      <v-container class="task-container">
-        sddsd
+    <transition name="slide" @enter="setMaxHeight">
+      <v-container class="tomorrow-task-container" v-if="ShowTommorowTasksCard"
+        :class="{ expended: ShowTommorowTasksContent }">
+        <Task :items="tomorrowTasks" />
       </v-container>
-    </v-container> -->
-    <v-container class="task-card">
-      <v-container class="container-head">
-        <p>Задачи в процессе</p>
-      </v-container>
-      <v-container class="task-container">
-        <Task :items="inProccessTask" />
-      </v-container>
+    </transition>
+
+    <v-container class="tomorrow-task-btn" @click="toggleTommorowTasks">
+      {{ ShowTommorowTasksCard ? 'Скрыть задачи на завтра' : 'Посмотреть задачи на завтра' }}
+    </v-container>
+  </v-container>
+
+  <v-container class="task-card">
+    <v-container class="container-head">
+      <p>Задачи в процессе</p>
+    </v-container>
+    <v-container class="task-container">
+      <Task :items="inProccessTask" />
     </v-container>
   </v-container>
 </template>
 
 <script setup lang="ts">
 import Task from '@/components/Task.vue'
-import { ref } from 'vue' 
+import { ref } from 'vue'
 
-const EnableTomorrowTasks = ref<Boolean>(false)
-
-function SwitchTomorrowTasksEnable(){
-  EnableTomorrowTasks.value = !EnableTomorrowTasks.value
+const ShowTommorowTasksCard = ref(false);
+const ShowTommorowTasksContent = ref(false);
+/* const toggleTommorowTasks = () => {
+    ShowTommorowTasksCard.value = !ShowTommorowTasksCard.value;
+}; */
+function toggleTommorowTasks() {
+  
+  if (!ShowTommorowTasksCard.value) {
+    ShowTommorowTasksCard.value = true;
+    setTimeout(() => {
+      ShowTommorowTasksContent.value = ShowTommorowTasksCard.value
+    }, 400)
+  } else {
+    ShowTommorowTasksContent.value = false;
+    setTimeout(() => {
+      ShowTommorowTasksCard.value = ShowTommorowTasksContent.value
+    }, 400)
+  }
+}
+const setMaxHeight = (element) => {
+  element.style.setProperty(
+    '--max-height',
+    element.scrollHeight + 'px'
+  );
 }
 
+
+
 const todayTasks = [
-  {
-    time: '14:20',
-    taskText: 'Встать',
-  },
-  {
-    time: '18:09',
-    taskText: 'Умыться',
-  },
-  {
-    time: '14:20',
-    taskText: 'Встать',
-  },
-  {
-    time: '18:09',
-    taskText: 'Умыться',
-  },
   {
     time: '14:20',
     taskText: 'Встать',
@@ -81,22 +85,6 @@ const todayTasks = [
 ]
 
 const tomorrowTasks = [
-  {
-    time: '14:20',
-    taskText: 'Встать',
-  },
-  {
-    time: '18:09',
-    taskText: 'Умыться',
-  },
-  {
-    time: '14:20',
-    taskText: 'Встать',
-  },
-  {
-    time: '18:09',
-    taskText: 'Умыться',
-  },
   {
     time: '14:20',
     taskText: 'Встать',
@@ -138,11 +126,13 @@ const inProccessTask = [
   border-radius: 10px;
   width: 60vw;
   padding: 0px;
-  margin: 27px;
+  margin: 30px;
   justify-self: center;
+
 }
 
-.tomorrow-task {
+.tomorrow-task-btn {
+  max-width: 100%;
   border-radius: 0px 0px 10px 10px;
   background-color: #38434E;
   text-align: center;
@@ -153,7 +143,6 @@ const inProccessTask = [
 .container-head {
   background-color: #13181D;
   border-radius: 10px 10px 0px 0px;
-
   text-align: center;
   font-size: 25px;
   font-weight: 600;
@@ -164,7 +153,38 @@ const inProccessTask = [
   padding: 30px;
 }
 
+.tomorrow-task-container {
+  margin: 0;
+  padding: 0px 30px 30px 30px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.tomorrow-task-container.expended {
+  opacity: 1;
+}
+
 p {
   color: #8393A9;
+}
+
+.slide-enter-active {
+  transition: 0.3s max-height;
+}
+
+.slide-leave-active {
+  transition: 0.3s max-height;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  max-height: var(--max-height, 1000px);
+  overflow: hidden;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  overflow: hidden;
+  max-height: 0;
 }
 </style>
