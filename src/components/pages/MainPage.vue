@@ -1,4 +1,5 @@
 <template>
+  <v-container style="padding: 0;">
   <v-container class="task-card">
     <v-container class="container-head">
       <p>Задачи на сегодня</p>
@@ -26,6 +27,7 @@
     <v-container class="task-container">
       <Task :items="inProccessTask" />
     </v-container>
+  </v-container>
   </v-container>
 </template>
 

@@ -2,6 +2,7 @@
   <v-container>
     <h2 class="ma-10" style="text-align: center;">NotesPage</h2>
     <v-container class="ma-10 justify-center">
+      <p>- Сайдбар управляется boolean переменной в 'components/Header/SideBar' на второй строке</p>
       <p>
         - Приветственная страница: <br>
         Когда на сайт заходит не зарегестирированный пользователь, у него выскакивает страница такого содержания <br>

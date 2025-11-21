@@ -1,26 +1,8 @@
 <template>
   <v-container class="header">
-    <v-row class=pages-btn-container>
-      <v-container class="icon-container">
-        <a href="/">
-          <img class="icon" src="@/assets/planer_icon.svg" />
-        </a>
-      </v-container>
-      <v-container class="icon-container">
-        <a href="/notes">
-          <img class="icon" src="@/assets/notes_icon.svg" />
-        </a>
-      </v-container>
-      <v-container class="icon-container">
-        <a href="/files">
-          <img class="icon" src="@/assets/files_icon.svg" />
-        </a>
-      </v-container>
-    </v-row>
-    <!-- <v-col class="search-container">
-      <input v-model="message" placeholder="найти..." style="width: 100%; padding: 10px;" />
-      
-    </v-col style="max-height: 100%;"> -->
+    <v-container class="burger">
+
+    </v-container>
     <v-col cols="6">
       <inputCustom field />
     </v-col>
@@ -32,9 +14,8 @@
   </v-container>
 </template>
 
-<script>
-import inputCustom from './inputCustom.vue';
-
+<script lang="ts">
+import inputCustom from '@/components/inputCustom.vue'
 
 </script>
 
@@ -50,11 +31,8 @@ import inputCustom from './inputCustom.vue';
 
 }
 
-.pages-btn-container {
+.burger {
   display: flex;
-  gap: 0px 5px;
-  /* для добавления отступов между иконками страниц */
-  justify-content: space-between;
   max-width: fit-content;
   max-height: 100%;
   padding: 0px;
