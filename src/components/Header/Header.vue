@@ -1,7 +1,7 @@
 <template>
   <v-container class="header">
-    <v-container class="burger">
-
+    <v-container class="icon-container">
+      <burger />
     </v-container>
     <v-col cols="6">
       <inputCustom field />
@@ -14,13 +14,16 @@
   </v-container>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import inputCustom from '@/components/inputCustom.vue'
-
+import burger from '@/components/Header/BurgerButton.vue'
 </script>
 
 <style scoped>
 .header {
+  position: sticky;
+  top:0%;
+  left: 0%;
   max-height: 524px;
   max-width: 100%;
   display: flex;
@@ -41,33 +44,19 @@ import inputCustom from '@/components/inputCustom.vue'
 
 .icon-container {
   padding: 0px;
-  margin: 0px;
-  max-width: 35px;
-  max-height: 100%;
-  /* background: aqua; */
-  /* mix-blend-mode: color; */
-
-
+  margin: 3px;
+  width: 35px;
+  height: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-
-/* .icon {
-  width: 100%;
-  mix-blend-mode: color;
-  overflow: hidden;
-  background: aqua;
-  height: 100%;
-  margin: 0%;
-  color: transparent;
-} */
 
 .icon {
   width: 100%;
   background-size: cover;
-  /* overflow:hidden; */
   height: 100%;
   margin: 0%;
-  /* color: transparent; */
-  /* opacity: 0; */
+
 }
 
 .search-container {

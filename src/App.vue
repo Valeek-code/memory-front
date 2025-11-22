@@ -29,4 +29,9 @@ body {
   transition: 0.4s;
 }
 
+.routers{
+  margin: 0%;
+  max-width: 100%;
+}
+
 </style>

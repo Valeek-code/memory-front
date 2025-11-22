@@ -1,5 +1,5 @@
 <template>
-    <v-container class="main-container" :class="{ expended: true }">
+    <v-container class="main-container" :class="{ expended: sidebarStore.isSidebarExpanded }">
         <a href="/">
             <v-row class='sidebar-btn-container'>
                 <v-container class="icon-container">
@@ -29,6 +29,9 @@
 
 <script setup lang="ts">
 
+import { usePersistentSidebarStore } from '@/components/Header/useSidebarState';
+
+const sidebarStore = usePersistentSidebarStore();
 </script>
 
 <style scoped>
@@ -39,7 +42,7 @@
     margin: 0%;
     padding: 0%;
     background-color: #282C34;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 .main-container.expended {
@@ -53,6 +56,7 @@
 .sidebar-btn-container {
     margin: 0%;
     padding: 8px;
+    min-width: 350px;
 }
 
 .icon-container {
