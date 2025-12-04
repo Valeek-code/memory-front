@@ -36,6 +36,8 @@ const sidebarStore = usePersistentSidebarStore();
 
 <style scoped>
 .main-container {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     width: 0px;
     min-height: 100vh;
