@@ -18,6 +18,7 @@ declare module 'vue' {
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     InProccessTask: typeof import('./components/pages/MainPage.vuecessTask.vue')['default']
     InputCustom: typeof import('./components/inputCustom.vue')['default']
+    LoginInput: typeof import('./components/pages/LoginPage/LoginInput.vue')['default']
     LoginPage: typeof import('./components/pages/LoginPage/LoginPage.vue')['default']
     MainPage: typeof import('./components/pages/MainPage.vue')['default']
     Note: typeof import('./components/notes/note.vue')['default']
@@ -28,5 +29,6 @@ declare module 'vue' {
     Task: typeof import('./components/Task.vue')['default']
     TestPage: typeof import('./components/pages/__TestPage__.vue')['default']
     TodayTask: typeof import('./components/TodayTask.vue')['default']
+    ZOVInput: typeof import('./components/pages/LoginPage/ZOV-Input.vue')['default']
   }
 }

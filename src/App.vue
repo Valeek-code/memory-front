@@ -1,7 +1,7 @@
 <template>
-  <HeaderComponent />
+  <HeaderComponent v-if="!$route.path.includes('/login')" />
   <v-container class="main-container">
-    <SideBar />
+    <SideBar v-if="!$route.path.includes('/login')"/>
     <RouterView class="routers" />
   </v-container>
 </template>
