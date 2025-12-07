@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import ZOVInput from './ZOV-Input.vue';
+import ZOVInput from './ZovInput.vue';
 
 const selectedButton = ref(1)
 </script>

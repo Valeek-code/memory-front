@@ -1,22 +1,28 @@
 <template>
     <v-container class="input-container">
         <p>{{ props.title }}</p>
-        <input :type="props.type" :placeholder="props.placeholder">
+        <input
+            :type="props.type"
+            :placeholder="props.placeholder"
+            :value="modelValue"
+            @input="$emit('update:modelValue', $event.target.value)">
     </v-container>
 </template>
 
 
 <script setup lang="ts">
 
-const props = withDefaults(defineProps<{
-  title?: string
-  type?: string
-  placeholder?: string
-}>(), {
-  title: 'без названия',
-  type: 'text',
-  placeholder: ''
+const props = defineProps({
+    title: String,
+    type: {
+        type: String,
+        default: 'text'
+    },
+    placeholder: String,
+    modelValue: [String, Number] // Обязательно для v-model
 })
+
+const emit = defineEmits(['update:modelValue'])
 </script>
 
 <style scoped>

@@ -29,6 +29,7 @@ declare module 'vue' {
     Task: typeof import('./components/Task.vue')['default']
     TestPage: typeof import('./components/pages/__TestPage__.vue')['default']
     TodayTask: typeof import('./components/TodayTask.vue')['default']
+    ZovInput: typeof import('./components/pages/LoginPage/ZovInput.vue')['default']
     ZOVInput: typeof import('./components/pages/LoginPage/ZOV-Input.vue')['default']
   }
 }
