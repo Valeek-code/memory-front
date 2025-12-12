@@ -14,28 +14,26 @@
                 </v-container>
             </v-container>
 
-            <v-container class="inputs-container">
-                <v-container class="login-inputs" v-if="selectedButton == 1">
-                    <ZOVInput title="Имя пользователя" type="text" placeholder="Крутятский ник"></ZOVInput>
-                    <ZOVInput title="Пароль" type="password" placeholder="*********"></ZOVInput>
-                    <ZOVInput title="Email" type="email" placeholder="Your_email@example.ru"></ZOVInput>
+                <v-container class="inputs-container" v-if="selectedButton == 2">
+                    <ZOVInput class="input" title="Имя пользователя" type="text" placeholder="Крутятский ник"></ZOVInput>
+                    <ZOVInput class="input" title="Пароль" type="password" placeholder="*********"></ZOVInput>
+                    <ZOVInput class="input" title="Email" type="email" placeholder="Your_email@example.ru"></ZOVInput>
                 </v-container>
-                <v-container class="login-inputs" v-if="selectedButton == 2">
-                    <ZOVInput title="Имя пользователя или Email" type="text" placeholder="Крутятский ник"></ZOVInput>
-                    <ZOVInput title="Пароль" type="password" placeholder="*********"></ZOVInput>
+                <v-container class="inputs-container" v-if="selectedButton == 1">
+                    <ZOVInput class="input" title="Имя пользователя или Email" type="text" placeholder="Крутятский ник"></ZOVInput>
+                    <ZOVInput class="input" title="Пароль" type="password" placeholder="*********"></ZOVInput>
                 </v-container>
                 <v-container class="button submit-btn">
                     <p>Подтвердить</p>
                 </v-container>
 
-            </v-container>
         </v-container>
     </v-container>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import ZOVInput from './ZovInput.vue';
+import ZOVInput from '@/components/ZOV/ZovInput.vue';
 
 const selectedButton = ref(1)
 </script>
@@ -65,12 +63,18 @@ p {
 .login-input-main-container {
     display: flex;
     flex-direction: column;
-    background-color: #2B323B;
+    background-color: #232931;
     min-width: 720px;
     max-width: 720px;
     height: 100%;
     margin-left: auto;
     padding: 0%;
+}
+
+.input{
+    height: 114px;
+    width: 480px;
+    margin: 0px auto 0px auto;
 }
 
 .signin-signup-buttons {
@@ -88,11 +92,11 @@ p {
     align-items: center;
     font-size: 22px;
     font-weight: 400;
-    background-color: #232931;
+    background-color: #2B323B;
 }
 
 .button.selected {
-    background-color: #2B323B;
+    background-color: #232931;
     font-size: 28px;
 }
 
@@ -108,7 +112,11 @@ p {
     margin-top: 153px;
     display: flex;
     flex-direction: column;
+    justify-items: center;
 }
+
+
+
 
 .submit-btn {
     display: flex;
@@ -117,9 +125,9 @@ p {
     width: 280px;
     justify-content: center;
     align-items: center;
-    background-color: #2C5D9F;
+    background-color: #303c4d;
     border-radius: 15px;
-    border: 2px solid #252B33;
+    border: 2px solid #242a31;
     font-size: 28px;
 }
 </style>

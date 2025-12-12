@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import axios from 'axios';
-import ZOVInput from './LoginPage/ZovInput.vue';
+import ZOVInput from '../ZOV/ZovInput.vue';
 
 const oblectToSend = ref({
     name: "string",

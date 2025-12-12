@@ -3,8 +3,8 @@
     <v-container class="icon-container">
       <burger />
     </v-container>
-    <v-col cols="6">
-      <inputCustom field />
+    <v-col class="pa-0" cols="6">
+       <ZOVInput class="pa-0" :height="60" placeholder="найти" textAlign="center"/>
     </v-col>
     <v-container class="icon-container">
       <a href="/test_page">
@@ -15,11 +15,13 @@
 </template>
 
 <script setup lang="ts">
-import inputCustom from '@/components/inputCustom.vue'
 import burger from '@/components/Header/BurgerButton.vue'
+import ZOVInput from '@/components/ZOV/ZovInput.vue'
+
 </script>
 
 <style scoped>
+
 .header {
   position: sticky;
   top:0%;
