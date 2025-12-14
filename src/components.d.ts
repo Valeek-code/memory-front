@@ -12,6 +12,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     __TestPage__: typeof import('./components/pages/__TestPage__.vue')['default']
+    1: typeof import('./components/notes/1.vue')['default']
     BurgerButton: typeof import('./components/Header/BurgerButton.vue')['default']
     FilesVaultPage: typeof import('./components/pages/FilesVaultPage.vue')['default']
     Header: typeof import('./components/Header/Header.vue')['default']

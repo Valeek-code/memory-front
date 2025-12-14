@@ -13,37 +13,36 @@
 
 <script setup lang="ts">
 
-  interface Task {
-    time: string
-    taskText: string
-  }
+interface Task {
+  time: string
+  taskText: string
+}
 
-  const props = defineProps<{ items: Task }>()
+const props = defineProps<{ items: Task }>()
 
 </script>
 
 <style scoped>
-p{
-    width: fit-content;
-}
-
-.main-row{
-    flex-wrap: nowrap;
+.main-row {
+  flex-wrap: nowrap;
 }
 
 .task-time {
-    background-color: #1C2632;
-    border-radius: 20px 0px 0px 20px;
-    text-align: center;
-    max-width: fit-content;
+  background-color: #1C2632;
+  border-radius: 20px 0px 0px 20px;
+  text-align: center;
+  max-width: fit-content;
 }
 
 .task-content {
-    background-color: #333C46;
-    border-radius: 0px 20px 20px 0px;
+  background-color: #333C46;
+  border-radius: 0px 20px 20px 0px;
 }
 
 p {
-    color: #8393A9;
+  font-weight:500;
+  color: #8393A9;
+  width: fit-content;
+  font-size: 24px;
 }
 </style>
