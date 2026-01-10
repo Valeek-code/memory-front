@@ -10,7 +10,7 @@ import MainPage from '@/components/pages/MainPage.vue'
 import NotesPage from '@/components/pages/NotesPage.vue'
 import FilesVaultPage from '@/components/pages/FilesVaultPage.vue'
 import __TestPage__ from '@/components/pages/__TestPage__.vue'
-import LoginPage from '@/components/pages/LoginPage/LoginPage.vue'
+import LoginPage from '@/components/pages/LoginPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {

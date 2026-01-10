@@ -20,7 +20,7 @@ declare module 'vue' {
     InProccessTask: typeof import('./components/pages/MainPage.vuecessTask.vue')['default']
     InputCustom: typeof import('./components/inputCustom.vue')['default']
     LoginInput: typeof import('./components/pages/LoginPage/LoginInput.vue')['default']
-    LoginPage: typeof import('./components/pages/LoginPage/LoginPage.vue')['default']
+    LoginPage: typeof import('./components/pages/LoginPage.vue')['default']
     MainPage: typeof import('./components/pages/MainPage.vue')['default']
     Note: typeof import('./components/notes/note.vue')['default']
     NotesPage: typeof import('./components/pages/NotesPage.vue')['default']

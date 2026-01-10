@@ -43,6 +43,6 @@ p {
   font-weight:500;
   color: #8393A9;
   width: fit-content;
-  font-size: 24px;
+  font-size: 18px;
 }
 </style>

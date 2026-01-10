@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <h2 class="note-title">Новая заметка</h2>
-    <p>asddawdaws</p>
+    <input type="mu">
   </v-container>
 </template>
 
@@ -10,7 +10,7 @@ import axios from 'axios';
 
 
 function getNoteData() {
-    axios.post("http://127.0.0.1:8000/api/v1/user/add", oblectToSend.value)
+    const response = axios.get("http://127.0.0.1:8000/api/v1/user/add");
 }
 
 </script>
