@@ -1,7 +1,7 @@
 <template>
-  <HeaderComponent />
-  <v-container class="test">
-    <SideBar />
+  <HeaderComponent v-if="!$route.path.includes('/login')" />
+  <v-container class="main-container">
+    <SideBar v-if="!$route.path.includes('/login')"/>
     <RouterView class="routers" />
   </v-container>
 </template>
@@ -16,22 +16,23 @@ import SideBar from '@/components/Header/SideBar.vue'
 </script>
 
 
-<style scoped>
-
+<style>
 body {
   background-color: #1C2127;
+
 }
 
-.test {
+.main-container {
+  max-width: 100%;
   display: flex;
-  margin: 0 ;
+  margin: 0px;
   padding: 0;
   transition: 0.4s;
 }
 
-.routers{
-  margin: 0%;
-  max-width: 100%;
-}
+.routers {
+  flex: 1;
+  width: 100%;
 
+}
 </style>

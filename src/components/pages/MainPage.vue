@@ -1,34 +1,36 @@
 <template>
-  <v-container style="padding: 0;">
-  <v-container class="task-card">
-    <v-container class="container-head">
-      <p>Задачи на сегодня</p>
-    </v-container>
-    <v-container class="task-container">
-      <Task :items="todayTasks" />
-    </v-container>
+  <v-row>
+    <v-col>
+      <v-container class="task-card">
+        <v-container class="container-head">
+          <p>Задачи на сегодня</p>
+        </v-container>
+        <v-container class="task-container">
+          <Task :items="todayTasks" />
+        </v-container>
 
-    <transition name="slide" @enter="setMaxHeight">
-      <v-container class="tomorrow-task-container" v-if="ShowTommorowTasksCard"
-        :class="{ expended: ShowTommorowTasksContent }">
-        <Task :items="tomorrowTasks" />
+        <transition name="slide" @enter="setMaxHeight">
+          <v-container class="tomorrow-task-container" v-if="ShowTommorowTasksCard"
+            :class="{ expended: ShowTommorowTasksContent }">
+            <Task :items="tomorrowTasks" />
+          </v-container>
+        </transition>
+
+        <v-container class="tomorrow-task-btn" @click="toggleTommorowTasks">
+          {{ ShowTommorowTasksCard ? 'Скрыть задачи на завтра' : 'Посмотреть задачи на завтра' }}
+        </v-container>
       </v-container>
-    </transition>
 
-    <v-container class="tomorrow-task-btn" @click="toggleTommorowTasks">
-      {{ ShowTommorowTasksCard ? 'Скрыть задачи на завтра' : 'Посмотреть задачи на завтра' }}
-    </v-container>
-  </v-container>
-
-  <v-container class="task-card">
-    <v-container class="container-head">
-      <p>Задачи в процессе</p>
-    </v-container>
-    <v-container class="task-container">
-      <Task :items="inProccessTask" />
-    </v-container>
-  </v-container>
-  </v-container>
+      <v-container class="task-card">
+        <v-container class="container-head">
+          <p>Задачи в процессе</p>
+        </v-container>
+        <v-container class="task-container">
+          <Task :items="inProccessTask" />
+        </v-container>
+      </v-container>
+    </v-col>
+  </v-row>
 </template>
 
 <script setup lang="ts">
@@ -41,7 +43,7 @@ const ShowTommorowTasksContent = ref(false);
     ShowTommorowTasksCard.value = !ShowTommorowTasksCard.value;
 }; */
 function toggleTommorowTasks() {
-  
+
   if (!ShowTommorowTasksCard.value) {
     ShowTommorowTasksCard.value = true;
     setTimeout(() => {

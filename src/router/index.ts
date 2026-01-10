@@ -9,7 +9,8 @@ import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import MainPage from '@/components/pages/MainPage.vue'
 import NotesPage from '@/components/pages/NotesPage.vue'
 import FilesVaultPage from '@/components/pages/FilesVaultPage.vue'
-import __TestPage__ from '@/components/__TestPage__.vue'
+import __TestPage__ from '@/components/pages/__TestPage__.vue'
+import LoginPage from '@/components/pages/LoginPage/LoginPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,6 +27,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'FilesVault',
     path: '/files',
     component: FilesVaultPage,
+  },
+  {
+    name: 'LoginPage',
+    path: '/login',
+    component: LoginPage
   },
   {
     name: 'TestPage',

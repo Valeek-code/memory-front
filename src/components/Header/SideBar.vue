@@ -24,6 +24,9 @@
                 <p>Хранилище файлов</p>
             </v-row>
         </a>
+        <v-container v-if="$route.path.includes('/notes')" class="addNewNoteBtn">
+            <p class = addNewNoteText>Новая заметка</p>
+        </v-container>
     </v-container>
 </template>
 
@@ -36,6 +39,8 @@ const sidebarStore = usePersistentSidebarStore();
 
 <style scoped>
 .main-container {
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     width: 0px;
     min-height: 100vh;
@@ -80,6 +85,24 @@ p {
     margin-top: auto;
     margin-bottom: auto;
 }
+
+.addNewNoteBtn{
+    cursor: pointer !important;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: #38434E;
+    text-align: center;
+    height: 57px;
+    width: 319px;
+    padding: 8px;
+}
+
+.addNewNoteText{
+    color: #93A9C7;
+    font-size: 32px;
+    margin: 0 auto; 
+    line-height: normal;
+} 
 
 a:active,
 /* активная/посещенная ссылка */
