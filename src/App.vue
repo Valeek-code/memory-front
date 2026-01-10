@@ -19,7 +19,6 @@ import SideBar from '@/components/Header/SideBar.vue'
 <style>
 body {
   background-color: #1C2127;
-
 }
 
 .main-container {
@@ -33,6 +32,5 @@ body {
 .routers {
   flex: 1;
   width: 100%;
-
 }
 </style>

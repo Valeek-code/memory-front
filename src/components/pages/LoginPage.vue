@@ -78,7 +78,7 @@ const oblectToSend = ref({
 });
 
 function sendResults() {
-  axios.post("http://127.0.0.1:8000/register", oblectToSend.value);
+  axios.post("http://127.0.0.1:8000/api/v1/register", oblectToSend.value);
 }
 </script>
 
