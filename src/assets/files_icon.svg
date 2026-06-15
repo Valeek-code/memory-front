@@ -1,5 +1,9 @@
-<svg width="59" height="60" viewBox="0 0 59 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 7C18 3.68629 20.6863 1 24 1H46C51.5228 1 56 5.47715 56 11V12H18V7Z" fill="#929292"/>
-<path d="M0 6C0 2.68629 2.68629 0 6 0H28C33.5228 0 38 4.47715 38 10V12H0V6Z" fill="#D9D9D9"/>
-<path d="M49 9.5C53.1421 9.5 56.5 12.8579 56.5 17V50C56.5 54.1421 53.1421 57.5 49 57.5H10C5.85786 57.5 2.5 54.1421 2.5 50V9.5H49Z" stroke="#D9D9D9" stroke-width="5"/>
+<svg width="59" height="60" viewBox="0 0 59 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Верхний файл (нормальный) -->
+  <path d="M18 7C18 3.68629 20.6863 1 24 1H46C51.5228 1 56 5.47715 56 11V12H18V7Z" fill="currentColor" opacity="0.6"/>
+  
+<path d="M-4 6C-4 2.68629 -1.31371 0 2 0H24C29.5228 0 34 4.47715 34 10V12H-4V6Z" fill="currentColor" transform="translate(5, 0)"/>
+  
+  <!-- Нижний файл (нормальный) -->
+  <path d="M49 9.5C53.1421 9.5 56.5 12.8579 56.5 17V50C56.5 54.1421 53.1421 57.5 49 57.5H10C5.85786 57.5 2.5 54.1421 2.5 50V9.5H49Z" stroke="currentColor" stroke-width="3" fill="none"/>
 </svg>

@@ -1,0 +1,20 @@
+/* Тёмная тема */
+[data-theme="dark"] {
+  --bg: #191919;
+  --text: #C2F54F;
+  --box-bg: #2d2d2d;
+  --border: #485c19;
+  --button-bg: #C2F54F;
+  --button-hover: #b3e246;
+  --button-text:#191919;
+}
+
+/* Светлая тема */
+[data-theme="light"] {
+  --bg: #f5f5f5;
+  --text: #333333;
+  --box-bg: #ffffff;
+  --border: #dddddd;
+  --button-bg: #42b883;
+  --button-hover: #3aa876;
+}

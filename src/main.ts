@@ -15,11 +15,10 @@ import App from './App.vue'
 
 // Styles
 import 'unfonts.css'
+import '@/styles/theme.css'
 
 const app = createApp(App)
-const pinia = createPinia()
 
 registerPlugins(app)
-
-app.use(pinia)
+app.use(createPinia())
 app.mount('#app')

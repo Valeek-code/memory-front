@@ -37,6 +37,10 @@ const props = defineProps({
         type: Number,
         default: 62 
     },
+    width: {
+        type: Number,
+        default: 62 
+    },
     textSize: {
         type: Number,
         default: 24
@@ -66,6 +70,7 @@ const cssVars = computed(() => ({
 
 input {
     height: var(--input-height, 62px);
+    width: var(--input-width,100px);
     width: 100%;
     padding: 20px;
     background-color: #2B323B;
