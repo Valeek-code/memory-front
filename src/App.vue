@@ -1,17 +1,16 @@
 <template>
   <v-container class="app" :data-theme="theme" fluid>
     <HeaderComponent v-if="!$route.path.includes('/login')" />
-    <v-container class="main-container">
-      <RouterView class="routers" />
-    </v-container>
+    <RouterView class="routers" />
   </v-container>
 </template>
 
 <script lang="ts" setup>
-import { onMounted, computed } from 'vue'
-import { useThemeStore } from '@/composables/theme'
 import { RouterView } from 'vue-router'
 import HeaderComponent from '@/components/header/Header.vue'
+import { onMounted, computed } from 'vue'
+import { useThemeStore } from '@/composables/theme'
+
 
 const themeStore = useThemeStore()
 const theme = computed(() => themeStore.theme)
@@ -30,12 +29,18 @@ onMounted(() => {
 }
 
 body {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-page);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Текст */
-p, h1, h2, h3, span, li, a {
+p,
+h1,
+h2,
+h3,
+span,
+li,
+a {
   color: var(--text-primary);
 }
 
@@ -45,6 +50,11 @@ p, h1, h2, h3, span, li, a {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
+}
+
+.icon,
+.icon-container {
+  color: var(--icon-color);
 }
 
 /* Поля ввода */
@@ -89,15 +99,10 @@ button:hover {
   transition: background 0.3s, color 0.3s;
 }
 
-.main-container {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .routers {
   flex: 1;
   width: 100%;
+  padding-top: 80px;
 }
 
 /* Скроллбар (опционально) */

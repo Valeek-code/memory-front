@@ -21,6 +21,17 @@ export const useThemeStore = defineStore('theme', () => {
     localStorage.setItem('theme', theme.value)
     applyTheme()
   }
+  const getThemeName = (): string => {
+    if (theme.value === 'dark') {
+      return 'Темная тема'
+    }
+    else if (theme.value === 'light'){
+      return 'Светлая тема'
+    }
+    else if (theme.value === 'pink'){
+      return 'Розовая тема'
+    }
+  }
 
-  return { theme, loadTheme, toggleTheme, applyTheme }
+  return { theme, loadTheme, toggleTheme, applyTheme, getThemeName }
 })

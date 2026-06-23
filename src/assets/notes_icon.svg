@@ -5,7 +5,6 @@
   fill="currentColor" 
   xmlns="http://www.w3.org/2000/svg"
 >
-  <!-- Внешняя рамка -->
   <rect 
     x="2.5" y="2.5" 
     width="54" height="55" 
@@ -15,27 +14,21 @@
     fill="none"
   />
   
-  <!-- Вертикальные разделители -->
   <rect x="18" y="3" width="3" height="54" fill="currentColor"/>
   <rect x="36" y="3" width="3" height="54" fill="currentColor"/>
   
-  <!-- Три миниатюры внизу -->
   <rect x="7" y="44" width="9" height="9" rx="4.5" fill="currentColor"/>
   <rect x="25" y="44" width="9" height="9" rx="4.5" fill="currentColor"/>
   <rect x="43" y="44" width="9" height="9" rx="4.5" fill="currentColor"/>
   
-  <!-- Полоски-изображения в верхней части (3 ряда по 3 полоски) -->
-  <!-- Ряд 1 -->
   <rect x="7" y="18" width="9" height="2" fill="currentColor"/>
   <rect x="25" y="18" width="9" height="2" fill="currentColor"/>
   <rect x="43" y="18" width="9" height="2" fill="currentColor"/>
   
-  <!-- Ряд 2 -->
   <rect x="7" y="22" width="9" height="2" fill="currentColor"/>
   <rect x="25" y="22" width="9" height="2" fill="currentColor"/>
   <rect x="43" y="22" width="9" height="2" fill="currentColor"/>
   
-  <!-- Ряд 3 -->
   <rect x="7" y="26" width="9" height="2" fill="currentColor"/>
   <rect x="25" y="26" width="9" height="2" fill="currentColor"/>
   <rect x="43" y="26" width="9" height="2" fill="currentColor"/>

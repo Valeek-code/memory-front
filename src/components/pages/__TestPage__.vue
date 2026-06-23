@@ -2,51 +2,21 @@
   <div class="app" :data-theme="theme">
     <div class="icon-wrapper">
       <!-- ИСПРАВЛЕННАЯ иконка -->
-      <svg 
-        class="document-icon"
-        width="120" 
-        height="120" 
-        viewBox="0 0 62 62" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg class="document-icon" width="120" height="120" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
         <!-- Рамка -->
-        <rect 
-          x="2.5" y="2.5" 
-          width="57" height="57" 
-          rx="10" 
-          stroke="currentColor" 
-          stroke-width="3"
-          fill="none"
-        />
-        
+        <rect x="2.5" y="2.5" width="57" height="57" rx="10" stroke="currentColor" stroke-width="3" fill="none" />
+
         <!-- Верхняя полоса -->
-        <rect 
-          x="12" y="12" 
-          width="38" height="4" 
-          rx="2" 
-          fill="currentColor"
-        />
-        
+        <rect x="12" y="12" width="38" height="4" rx="2" fill="currentColor" />
+
         <!-- Подзаголовок -->
-        <rect 
-          x="12" y="20" 
-          width="25" height="3" 
-          rx="1.5" 
-          fill="currentColor"
-          opacity="0.6"
-        />
-        
+        <rect x="12" y="20" width="25" height="3" rx="1.5" fill="currentColor" opacity="0.6" />
+
         <!-- Основной контент -->
-        <rect 
-          x="12" y="30" 
-          width="38" height="20" 
-          rx="2" 
-          fill="currentColor"
-          opacity="0.4"
-        />
+        <rect x="12" y="30" width="38" height="20" rx="2" fill="currentColor" opacity="0.4" />
       </svg>
     </div>
-    
+
     <div class="controls">
       <p>Текущая тема: {{ theme === 'dark' ? '🌙 Тёмная' : '☀️ Светлая' }}</p>
       <button @click="toggleTheme">Сменить тему</button>
@@ -82,20 +52,6 @@ onMounted(() => {
 }
 
 /* Тёмная тема */
-[data-theme="dark"] {
-  --icon-color: #42b883;
-  --bg: #1e1e1e;
-  --card-bg: #2d2d2d;
-  --text: #ffffff;
-}
-
-/* Светлая тема */
-[data-theme="light"] {
-  --icon-color: #e94560;
-  --bg: #f5f5f5;
-  --card-bg: #ffffff;
-  --text: #333333;
-}
 
 body {
   background: var(--bg);

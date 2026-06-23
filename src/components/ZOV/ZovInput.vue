@@ -10,15 +10,8 @@
 
  -->
 <template>
-    <v-container class="input-container">
-        <p v-if="props.title != ''">{{ props.title }}</p>
-        <input 
-        :style="cssVars" 
-        :type="props.type" 
-        :placeholder="props.placeholder" 
-        :value="modelValue"
-        @input="$emit('update:modelValue', $event.target.value)">
-    </v-container>
+        <input :style="cssVars" :type="props.type" :placeholder="props.placeholder" :value="modelValue"
+            @input="$emit('update:modelValue', $event.target.value)">
 </template>
 
 
@@ -26,7 +19,6 @@
 import { computed } from 'vue';
 
 const props = defineProps({
-    title: String,
     type: {
         type: String,
         default: 'text'
@@ -35,11 +27,11 @@ const props = defineProps({
     modelValue: [String, Number], // Обязательно для v-model
     height: {
         type: Number,
-        default: 62 
+        default: 62
     },
     width: {
         type: Number,
-        default: 62 
+        default: 62
     },
     textSize: {
         type: Number,
@@ -62,32 +54,36 @@ const cssVars = computed(() => ({
 </script>
 
 <style scoped>
-.input-container {
-    font-size: 22px;
-    padding: 0px;
-    margin: 0%;
-}
 
 input {
     height: var(--input-height, 62px);
-    width: var(--input-width,100px);
+    width: var(--input-width, 100px);
     width: 100%;
     padding: 20px;
-    background-color: #2B323B;
+    background-color: var(--bg-input);
+    color: var(--text-primary);
     border-radius: 20px;
-    border: 2px solid #252B33;
+    border: 2px solid var(--border);
     font-size: var(--input-text-size);
     text-align: var(--input-text-align);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
 }
 
 ::placeholder {
     font-family: 'Inter', sans-serif;
-    color: #5a6470;
+    color: var(--text-muted);
     font-size: var(--input-text-size);
 }
 
 
 p {
     font-family: 'Inter', sans-serif;
+    color: var(--border-focus);
 }
 </style>

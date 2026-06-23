@@ -20,14 +20,21 @@
         </v-row>
       </v-col>
 
-      <v-col cols="5">
-        <ZOVInput class="pa-0" :height="54" placeholder="найти" textAlign="center" />
+      <v-col cols="5" class="pa-0">
+        <ZOVInput class="pa-3" :height="50" placeholder="найти" textAlign="center" />
       </v-col>
 
       <v-col align="right">
         <v-container class="icon-container">
           <a href="/test_page">
-            <img class="icon" src="@/assets/calendar_icon.svg" />
+            <svg class="icon" width="40" height="40" viewBox="0 0 62 62" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect x="2.5" y="2.5" width="57" height="57" rx="10" stroke="currentColor" stroke-width="5"
+                fill="#00000000" />
+              <rect x="4.5" y="3.5" width="53" height="14" fill="currentColor" />
+              <rect x="10.5" y="23.5" width="41" height="27" fill="currentColor" />
+            </svg>
+
           </a>
         </v-container>
       </v-col>
@@ -53,23 +60,15 @@ function switchSideBarState() {
 <style scoped>
 .header {
   position: fixed;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 7px;
-  margin: 0%;
-  background-color: #181C20;
+  padding: 13px;
+  margin: 0;
+  background-color: var(--bg-header);
 
-}
-
-.burger {
-  display: flex;
-  max-width: fit-content;
-  max-height: 100%;
-  padding: 0px;
-  margin: 0%;
 }
 
 .icon-container {
@@ -86,22 +85,6 @@ function switchSideBarState() {
   background-size: cover;
   height: 100%;
   margin: 0%;
-
-}
-
-.search-container {
-  max-width: 500px;
-  max-height: 100%;
-  padding: 0px;
-  margin: 2.5px;
-  background-color: #232931;
-  display: flex;
-  border-radius: 20px;
-}
-
-.calendar-container {
-  max-width: fit-content;
-  padding: 0px;
 }
 
 
@@ -109,14 +92,14 @@ function switchSideBarState() {
   margin: 0%;
   padding: 3px;
   background-color: transparent;
-  border: 3px solid var(--text);
+  border: 3px solid var(--icon-color);
   width: 100%;
   height: 100%;
   border-radius: 6px;
 }
 
 .sidebar-state {
-  background-color: var(--text);
+  background-color: var(--icon-color);
   border-radius: 3px;
   max-height: 100%;
   margin: 0%;
