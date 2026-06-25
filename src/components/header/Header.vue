@@ -3,7 +3,7 @@
     <v-row align="center">
       <v-col align="left">
         <v-row>
-          <v-col cols="auto" class="">
+          <v-col cols="auto">
             <v-container class="icon-container">
               <button class="main-border" @click="switchSideBarState">
                 <v-container class="sidebar-state" :class="{ expanded: sideBarState }">
@@ -65,9 +65,10 @@ function switchSideBarState() {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 13px;
+  padding: 14px;
   margin: 0;
   background-color: var(--bg-header);
+  z-index: 100;
 
 }
 
@@ -96,6 +97,14 @@ function switchSideBarState() {
   width: 100%;
   height: 100%;
   border-radius: 6px;
+}
+
+.main-border:hover {
+  border-color: var(--accent-hover);
+}
+
+.main-border:hover .sidebar-state {
+  background-color: var(--accent-hover);
 }
 
 .sidebar-state {

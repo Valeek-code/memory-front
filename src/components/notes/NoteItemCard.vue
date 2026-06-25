@@ -1,12 +1,30 @@
 <template>
-<v-container class="card">note titel</v-container>
+    <router-link to="/about" v-if="props.isRouter">
+        <v-container class="card">{{ props.noteTitle }}</v-container>
+    </router-link>
 </template>
 
-<script>
+<script setup>
+const props = defineProps({
+    noteTitle: {
+        type: String,
+        default: 'Note title'
+    },
+    isRouter: {
+        type: Boolean,
+        default: true
+    },
+})
+
 </script>
 
 <style scoped>
-.card{
+.card {
     background-color: var(--bg-card);
+    width: auto;
+}
+
+a{
+    display: block;
 }
 </style>

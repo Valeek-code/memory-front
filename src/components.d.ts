@@ -30,6 +30,7 @@ declare module 'vue' {
     NoteListPage: typeof import('./components/notes/NoteListPage.vue')['default']
     NotePage: typeof import('./components/notes/NotePage.vue')['default']
     NotesPage: typeof import('./components/notes/NotesPage.vue')['default']
+    NoteTypeCard: typeof import('./components/notes/NoteTypeCard.vue')['default']
     NoteTypeLabel: typeof import('./components/notes/NoteTypeLabel.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

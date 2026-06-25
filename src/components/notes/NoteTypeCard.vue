@@ -2,14 +2,19 @@
     <v-container class="card">{{ props.title }}</v-container>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
-    title: String
+    title: {
+        type: String,
+        default: 'Note title'
+    },
 })
+
 </script>
 
 <style scoped>
 .card {
     background-color: var(--bg-card);
+    width: auto;
 }
 </style>

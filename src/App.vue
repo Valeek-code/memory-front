@@ -25,7 +25,15 @@ onMounted(() => {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  /* Отключаем скролл у всей страницы */
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -54,7 +62,13 @@ a {
 
 .icon,
 .icon-container {
+  transition: 0.2s;
   color: var(--icon-color);
+}
+
+.icon:hover,
+.icon-container:hover {
+  color: var(--accent-hover);
 }
 
 /* Поля ввода */
@@ -91,33 +105,38 @@ button:hover {
 
 /* Контейнер приложения */
 .app {
-  min-height: 100vh;
-  max-width: 100%;
+  display: flex;
+  height: 100vh;
+  max-width: 100vw;
   margin: 0;
   padding: 0;
   background: var(--bg-primary);
+  overflow: hidden;
   transition: background 0.3s, color 0.3s;
 }
 
 .routers {
-  flex: 1;
-  width: 100%;
-  padding-top: 80px;
+  margin: 68px 0 0 0;
+  overflow-y: scroll;
 }
 
-/* Скроллбар (опционально) */
+/* WebKit браузеры (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--border);
-  border-radius: 4px;
+  background: var(--scrollbar-track);
+  border-radius: var(--scrollbar-radius);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 4px;
+  background: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
 }
 </style>

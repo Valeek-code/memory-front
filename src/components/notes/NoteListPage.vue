@@ -1,30 +1,25 @@
 <template>
-    <v-row justify="center">
-        <v-col cols="4" class="mx-4">
-                <NoteTypeLabel class="ma-1 mt-3" title="Сохраненные" />
-            <v-col class="pa-0">
-                <NoteCard class="ma-1" v-for="n in 4" />
-            </v-col>
-                <NoteTypeLabel class="ma-1 mt-3" title="Открытый доступ" />
-            <v-col class="pa-0">
-                <NoteCard class="ma-1" v-for="n in 4" />
-            </v-col>
-                <NoteTypeLabel class="ma-1 mt-3" title="ss" />
-            <v-col class="pa-0">
-                <NoteCard class="ma-1" v-for="n in 4" />
-            </v-col>
-        </v-col>
+  <v-row justify="center">
+    <v-col cols="4" class="mx-4">
+      <NoteTypeCard class="ma-1 mt-3" title="Сохранённые" />
+      <NoteCard class="ma-1" v-for="n in 4" noteTitle="Saved note" />
 
-        <v-col cols="4" class="mx-4">
-            <NoteTypeLabel class="ma-1 mt-3" title="Сохраненные" />
-            <NoteCard class="ma-1" v-for="n in 4" />
-        </v-col>
-    </v-row>
+      <NoteTypeCard class="ma-1 mt-3" title="Открытый доступ" />
+      <NoteCard class="ma-1" v-for="n in 4" noteTitle="Shared note" />
+
+      <NoteTypeCard class="ma-1 mt-3" title="Мои заметки" />
+      <NoteCard class="ma-1" v-for="n in 10" noteTitle="My note" />
+    </v-col>
+    <v-col cols="4" class="mx-4">
+      <NoteTypeCard class="ma-1 mt-3" title="Избранное"/>
+      <NoteCard class="ma-1" v-for="n in 4" noteTitle="Favorite note" />
+    </v-col>
+  </v-row>
 </template>
 
 <script setup lang="ts">
 import NoteCard from '@/components/notes/NoteItemCard.vue';
-import NoteTypeLabel from '@/components/notes/NoteTypeLabel.vue';
+import NoteTypeCard from '@/components/notes/NoteTypeCard.vue';
 </script>
 
 <style scoped></style>

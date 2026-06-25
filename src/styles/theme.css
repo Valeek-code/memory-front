@@ -1,216 +1,263 @@
-/* Тёмная тема */
+/* ========================================
+   ТЁМНАЯ ТЕМА (Dark Yellow / Default)
+   ======================================== */
 [data-theme="dark"] {
-  /* ===== Фоны ===== */
-  --bg-page: #181C20;           /* глубокий тёмно-серый с лёгким теплом */
-  --bg-card: #21262B;           /* чуть светлее фона для карточек */
-  --bg-input: #2D3338;          /* поле ввода — приятный тёмный */
-  --bg-hover: #2D3338;          /* ховер на элементах */
+  /* Фоны */
+  --bg-page: #181C20;
+  --bg-card: #21262B;
+  --bg-input: #2D3338;
+  --bg-hover: #2D3338;
 
-  /* ===== Фоны для Header ===== */
-  --bg-header: #0F1215;         /* чуть темнее основного фона для глубины */
-  --bg-header-scrolled: #181C20; /* при скролле сливается с фоном */
-  --bg-header-dropdown: #21262B; /* фон для выпадающих меню в хедере */
-  --bg-header-hover: #2D3338;    /* ховер на пунктах меню в хедере */
+  /* Фоны Header */
+  --bg-header: #0F1215;
+  --bg-header-scrolled: #181C20;
+  --bg-header-dropdown: #21262B;
+  --bg-header-hover: #2D3338;
 
-  /* ===== Текст ===== */
-  --text-primary: #F0E6D0;      /* тёплый кремово-белый, не холодный */
-  --text-secondary: #C4B8A0;    /* мягкий бежево-серый */
-  --text-muted: #8A7E6A;        /* приглушённый, для второстепенных надписей */
-  --text-inverse: #181C20;      /* для текста на жёлтом фоне */
+  /* Текст */
+  --text-primary: #F0E6D0;
+  --text-secondary: #C4B8A0;
+  --text-muted: #8A7E6A;
+  --text-inverse: #181C20;
 
-  /* ===== Границы ===== */
-  --border: #3D3F45;            /* нейтральный тёмно-серый */
-  --border-focus: #D4A843;      /* жёлтый при фокусе */
+  /* Текст Header */
+  --text-header: #F0E6D0;
+  --text-header-secondary: #C4B8A0;
+  --text-header-active: #D4A843;
+  --text-header-hover: #E8C86A;
 
-  /* ===== Тени ===== */
+  /* Границы */
+  --border: #3D3F45;
+  --border-focus: #D4A843;
+
+  /* Границы Header */
+  --border-header: #2D2F33;
+  --border-header-active: #D4A843;
+
+  /* Тени */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --shadow-header: 0 2px 12px rgba(0, 0, 0, 0.5);
 
-  /* ===== Жёлтые акценты (спокойные, тёплые) ===== */
-  --accent: #D4A843;            /* золотисто-жёлтый, основной */
-  --accent-hover: #C49A3A;      /* чуть темнее для ховера */
-  --accent-active: #B08A30;     /* для активного/нажатого состояния */
-  --accent-light: #E8C86A;      /* светлый для подсветок, иконок */
-  --accent-dark: #A07A28;       /* глубокий для фоновых элементов */
+  /* Акценты */
+  --accent: #D4A843;
+  --accent-hover: #C49A3A;
+  --accent-active: #B08A30;
+  --accent-light: #E8C86A;
+  --accent-dark: #A07A28;
 
-  /* ===== Состояния ===== */
-  --success: #7A9A5A;           /* приглушённый зелёный (не кричит) */
-  --success-bg: #1E2A1A;        /* фон успеха */
+  /* Состояния */
+  --success: #7A9A5A;
+  --success-bg: #1E2A1A;
   --success-border: #5A7A3A;
+  --danger: #C06050;
+  --warning: #C4A040;
+  --info: #5A8AAA;
 
-  --danger: #C06050;            /* мягкий терракотово-красный */
-  --warning: #C4A040;           /* тёплый янтарный */
-  --info: #5A8AAA;              /* спокойный сине-серый */
+  /* Иконки */
+  --icon-color: #C4B8A0;
+  --icon-hover: #D4A843;
 
-  /* ===== Иконки ===== */
-  --icon-color: #C4B8A0;        /* приглушённый бежевый */
-  --icon-hover: #D4A843;        /* подсветка жёлтым */
+  /* Иконки Header */
+  --icon-header: #C4B8A0;
+  --icon-header-hover: #E8C86A;
+  --icon-header-active: #D4A843;
 
-  /* ===== Дополнительные жёлтые фоны ===== */
-  --bg-yellow-soft: #2A2618;    /* тёмный фон с жёлтым подтоном */
+  /* Логотип */
+  --logo-color: #D4A843;
+  --logo-color-hover: #E8C86A;
+  --logo-text: #F0E6D0;
+
+  /* Мобильное меню */
+  --burger-color: #D4A843;
+  --burger-color-hover: #E8C86A;
+  --bg-mobile-menu: #181C20;
+  --border-mobile-menu: #2D2F33;
+
+  /* Дополнительные фоны */
+  --bg-yellow-soft: #2A2618;
   --border-yellow-soft: #4A3F28;
+
+  /* Скроллбар */
+  --scrollbar-track: #181C20;
+  --scrollbar-thumb: #3D3F45;
+  --scrollbar-thumb-hover: #D4A843;
+  --scrollbar-width: 8px;
+  --scrollbar-radius: 4px;
 }
 
-/* Светлая тема */
+/* ========================================
+   СВЕТЛАЯ ТЕМА (Light Yellow / Warm)
+   ======================================== */
 [data-theme="light"] {
-  /* ===== Фоны ===== */
-  --bg-page: #F5F0E8;           /* тёплый кремово-бежевый, не холодный */
-  --bg-card: #FFFFFF;           /* чистый белый для карточек */
-  --bg-input: #F0EBE3;          /* мягкий бежевый для полей ввода */
-  --bg-hover: #EBE4DA;          /* тёплый серый для ховеров */
+  /* Фоны */
+  --bg-page: #F5F0E8;
+  --bg-card: #FFFFFF;
+  --bg-input: #F0EBE3;
+  --bg-hover: #EBE4DA;
 
-  /* ===== Фоны для Header ===== */
-  --bg-header: #FFFFFF;         /* белый хедер, классика */
-  --bg-header-scrolled: #F5F0E8; /* при скролле сливается с фоном */
-  --bg-header-dropdown: #FFFFFF; /* фон выпадающих меню */
-  --bg-header-hover: #F0EBE3;   /* ховер пунктов меню */
+  /* Фоны Header */
+  --bg-header: #FFFFFF;
+  --bg-header-scrolled: #F5F0E8;
+  --bg-header-dropdown: #FFFFFF;
+  --bg-header-hover: #F0EBE3;
 
-  /* ===== Текст ===== */
-  --text-primary: #2C241C;      /* тёмный тёплый, почти чёрный */
-  --text-secondary: #6B5F4F;    /* тёплый серо-коричневый */
-  --text-muted: #A89987;        /* приглушённый бежевый */
-  --text-inverse: #FFFFFF;      /* белый на тёмных элементах */
+  /* Текст */
+  --text-primary: #2C241C;
+  --text-secondary: #6B5F4F;
+  --text-muted: #A89987;
+  --text-inverse: #FFFFFF;
 
-  /* ===== Текст в Header ===== */
-  --text-header: #2C241C;       /* основной текст хедера (тёмный) */
-  --text-header-secondary: #6B5F4F; /* второстепенный текст */
-  --text-header-active: #B8924A; /* активный пункт — золотистый */
-  --text-header-hover: #D4A843;  /* ховер — светлый золотистый */
+  /* Текст Header */
+  --text-header: #2C241C;
+  --text-header-secondary: #6B5F4F;
+  --text-header-active: #B8924A;
+  --text-header-hover: #D4A843;
 
-  /* ===== Границы ===== */
-  --border: #E5DDD2;            /* мягкий бежевый */
-  --border-focus: #B8924A;      /* золотистый при фокусе */
+  /* Границы */
+  --border: #E5DDD2;
+  --border-focus: #B8924A;
 
-  /* ===== Границы в Header ===== */
-  --border-header: #EBE4DA;     /* нижняя граница хедера */
-  --border-header-active: #B8924A; /* подчёркивание активного пункта */
+  /* Границы Header */
+  --border-header: #EBE4DA;
+  --border-header-active: #B8924A;
 
-  /* ===== Тени ===== */
+  /* Тени */
   --shadow-sm: 0 1px 3px rgba(44, 36, 28, 0.08);
   --shadow-md: 0 4px 16px rgba(44, 36, 28, 0.10);
-
-  /* ===== Тени для Header ===== */
   --shadow-header: 0 2px 12px rgba(44, 36, 28, 0.08);
 
-  /* ===== Золотисто-жёлтые акценты (спокойные) ===== */
-  --accent: #B8924A;            /* основной золотистый */
-  --accent-hover: #A07D3A;      /* чуть темнее для ховера */
-  --accent-active: #8A6B30;     /* для активного состояния */
-  --accent-light: #D4B86A;      /* светлый для подсветок */
-  --accent-dark: #7A5E28;       /* глубокий для фонов */
+  /* Акценты */
+  --accent: #B8924A;
+  --accent-hover: #A07D3A;
+  --accent-active: #8A6B30;
+  --accent-light: #D4B86A;
+  --accent-dark: #7A5E28;
 
-  /* ===== Состояния ===== */
-  --success: #6A8A5A;           /* приглушённый зелёный */
-  --success-bg: #F0F5EC;        /* фон успеха */
+  /* Состояния */
+  --success: #6A8A5A;
+  --success-bg: #F0F5EC;
   --success-border: #C8DCC0;
+  --danger: #C06050;
+  --warning: #C4A040;
+  --info: #5A8AAA;
 
-  --danger: #C06050;            /* мягкий терракотовый */
-  --warning: #C4A040;           /* тёплый янтарный */
-  --info: #5A8AAA;              /* спокойный сине-серый */
+  /* Иконки */
+  --icon-color: #6B5F4F;
+  --icon-hover: #B8924A;
 
-  /* ===== Иконки ===== */
-  --icon-color: #6B5F4F;        /* тёплый серо-коричневый */
-  --icon-hover: #B8924A;        /* золотистый при ховере */
+  /* Иконки Header */
+  --icon-header: #6B5F4F;
+  --icon-header-hover: #B8924A;
+  --icon-header-active: #A07D3A;
 
-  /* ===== Иконки в Header ===== */
-  --icon-header: #6B5F4F;       /* иконки в хедере */
-  --icon-header-hover: #B8924A; /* ховер на иконках */
-  --icon-header-active: #A07D3A; /* активная иконка */
+  /* Логотип */
+  --logo-color: #B8924A;
+  --logo-color-hover: #D4A843;
+  --logo-text: #2C241C;
 
-  /* ===== Логотип ===== */
-  --logo-color: #B8924A;        /* цвет логотипа (золотистый) */
-  --logo-color-hover: #D4A843;  /* ховер на логотипе */
-  --logo-text: #2C241C;         /* текст логотипа */
+  /* Мобильное меню */
+  --burger-color: #B8924A;
+  --burger-color-hover: #D4A843;
+  --bg-mobile-menu: #FFFFFF;
+  --border-mobile-menu: #EBE4DA;
 
-  /* ===== Мобильное меню ===== */
-  --burger-color: #B8924A;      /* цвет бургер-иконки */
-  --burger-color-hover: #D4A843; /* ховер бургера */
-  --bg-mobile-menu: #FFFFFF;    /* фон мобильного меню */
-  --border-mobile-menu: #EBE4DA; /* разделители */
-
-  /* ===== Дополнительные жёлтые фоны ===== */
-  --bg-yellow-soft: #F8F3EA;    /* очень светлый бежевый */
+  /* Дополнительные фоны */
+  --bg-yellow-soft: #F8F3EA;
   --border-yellow-soft: #E5DDD2;
+
+  /* Скроллбар */
+  --scrollbar-track: #F5F0E8;
+  --scrollbar-thumb: #D4C8B8;
+  --scrollbar-thumb-hover: #B8A898;
+  --scrollbar-width: 8px;
+  --scrollbar-radius: 4px;
 }
 
-/* Розовая тема*/
+/* ========================================
+   РОЗОВАЯ ТЕМА (Pink / Rosy)
+   ======================================== */
 [data-theme="pink"] {
-  /* ===== Фоны ===== */
-  --bg-page: #FDF6F8;           /* тёплый бледно-розовый */
-  --bg-card: #FFFFFF;           /* чистый белый для карточек */
-  --bg-input: #FDF0F3;          /* мягкий розовый для полей ввода */
-  --bg-hover: #FCE8ED;          /* нежно-розовый для ховеров */
+  /* Фоны */
+  --bg-page: #FDF6F8;
+  --bg-card: #FFFFFF;
+  --bg-input: #FDF0F3;
+  --bg-hover: #FCE8ED;
 
-  /* ===== Фоны для Header ===== */
-  --bg-header: #FFFFFF;         /* белый хедер */
-  --bg-header-scrolled: #FDF6F8; /* при скролле сливается с фоном */
-  --bg-header-dropdown: #FFFFFF; /* фон выпадающих меню */
-  --bg-header-hover: #FDF0F3;   /* ховер пунктов меню */
+  /* Фоны Header */
+  --bg-header: #FFFFFF;
+  --bg-header-scrolled: #FDF6F8;
+  --bg-header-dropdown: #FFFFFF;
+  --bg-header-hover: #FDF0F3;
 
-  /* ===== Текст ===== */
-  --text-primary: #2C1F24;      /* тёмный с розовым подтоном */
-  --text-secondary: #6B4F58;    /* тёплый розово-серый */
-  --text-muted: #A88792;        /* приглушённый розовый */
-  --text-inverse: #FFFFFF;      /* белый на тёмных элементах */
+  /* Текст */
+  --text-primary: #2C1F24;
+  --text-secondary: #6B4F58;
+  --text-muted: #A88792;
+  --text-inverse: #FFFFFF;
 
-  /* ===== Текст в Header ===== */
-  --text-header: #2C1F24;       /* основной текст хедера (тёмный) */
-  --text-header-secondary: #6B4F58; /* второстепенный текст */
-  --text-header-active: #C84A7A; /* активный пункт — яркий розовый */
-  --text-header-hover: #D8608A;  /* ховер — светлый розовый */
+  /* Текст Header */
+  --text-header: #2C1F24;
+  --text-header-secondary: #6B4F58;
+  --text-header-active: #C84A7A;
+  --text-header-hover: #D8608A;
 
-  /* ===== Границы ===== */
-  --border: #F0DCE3;            /* мягкий розово-бежевый */
-  --border-focus: #C84A7A;      /* розовый при фокусе */
+  /* Границы */
+  --border: #F0DCE3;
+  --border-focus: #C84A7A;
 
-  /* ===== Границы в Header ===== */
-  --border-header: #F0DCE3;     /* нижняя граница хедера */
-  --border-header-active: #C84A7A; /* подчёркивание активного пункта */
+  /* Границы Header */
+  --border-header: #F0DCE3;
+  --border-header-active: #C84A7A;
 
-  /* ===== Тени ===== */
+  /* Тени */
   --shadow-sm: 0 1px 3px rgba(44, 31, 36, 0.08);
   --shadow-md: 0 4px 16px rgba(44, 31, 36, 0.10);
-
-  /* ===== Тени для Header ===== */
   --shadow-header: 0 2px 12px rgba(44, 31, 36, 0.08);
 
-  /* ===== Розовые акценты (спокойные) ===== */
-  --accent: #C84A7A;            /* основной розовый */
-  --accent-hover: #B03A6A;      /* чуть темнее для ховера */
-  --accent-active: #9A2A5A;     /* для активного состояния */
-  --accent-light: #E07090;      /* светлый для подсветок */
-  --accent-dark: #8A2A50;       /* глубокий для фонов */
+  /* Акценты */
+  --accent: #C84A7A;
+  --accent-hover: #B03A6A;
+  --accent-active: #9A2A5A;
+  --accent-light: #E07090;
+  --accent-dark: #8A2A50;
 
-  /* ===== Состояния ===== */
-  --success: #6A8A5A;           /* приглушённый зелёный */
-  --success-bg: #F0F5EC;        /* фон успеха */
+  /* Состояния */
+  --success: #6A8A5A;
+  --success-bg: #F0F5EC;
   --success-border: #C8DCC0;
+  --danger: #C06050;
+  --warning: #C4A040;
+  --info: #5A8AAA;
 
-  --danger: #C06050;            /* мягкий терракотовый */
-  --warning: #C4A040;           /* тёплый янтарный */
-  --info: #5A8AAA;              /* спокойный сине-серый */
+  /* Иконки */
+  --icon-color: #6B4F58;
+  --icon-hover: #C84A7A;
 
-  /* ===== Иконки ===== */
-  --icon-color: #6B4F58;        /* розово-серый */
-  --icon-hover: #C84A7A;        /* розовый при ховере */
+  /* Иконки Header */
+  --icon-header: #6B4F58;
+  --icon-header-hover: #C84A7A;
+  --icon-header-active: #B03A6A;
 
-  /* ===== Иконки в Header ===== */
-  --icon-header: #6B4F58;       /* иконки в хедере */
-  --icon-header-hover: #C84A7A; /* ховер на иконках */
-  --icon-header-active: #B03A6A; /* активная иконка */
+  /* Логотип */
+  --logo-color: #C84A7A;
+  --logo-color-hover: #D8608A;
+  --logo-text: #2C1F24;
 
-  /* ===== Логотип ===== */
-  --logo-color: #C84A7A;        /* цвет логотипа (розовый) */
-  --logo-color-hover: #D8608A;  /* ховер на логотипе */
-  --logo-text: #2C1F24;         /* текст логотипа */
+  /* Мобильное меню */
+  --burger-color: #C84A7A;
+  --burger-color-hover: #D8608A;
+  --bg-mobile-menu: #FFFFFF;
+  --border-mobile-menu: #F0DCE3;
 
-  /* ===== Мобильное меню ===== */
-  --burger-color: #C84A7A;      /* цвет бургер-иконки */
-  --burger-color-hover: #D8608A; /* ховер бургера */
-  --bg-mobile-menu: #FFFFFF;    /* фон мобильного меню */
-  --border-mobile-menu: #F0DCE3; /* разделители */
-
-  /* ===== Дополнительные розовые фоны ===== */
-  --bg-pink-soft: #FDF0F5;      /* очень светлый розовый */
+  /* Дополнительные фоны */
+  --bg-pink-soft: #FDF0F5;
   --border-pink-soft: #F0DCE3;
+
+  /* Скроллбар */
+  --scrollbar-track: #FDF6F8;
+  --scrollbar-thumb: #F0DCE3;
+  --scrollbar-thumb-hover: #C84A7A;
+  --scrollbar-width: 8px;
+  --scrollbar-radius: 4px;
 }
