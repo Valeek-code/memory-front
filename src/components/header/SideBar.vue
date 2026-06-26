@@ -132,6 +132,11 @@ function toggleTheme() {
     background-color: var(--bg-hover, #3a3f4b);
 }
 
+.sidebar-btn-container:hover .icon,
+.sidebar-btn-container:hover p {
+    color: var(--accent-hover);
+}
+
 /* Иконки */
 .icon-container {
     overflow: hidden;

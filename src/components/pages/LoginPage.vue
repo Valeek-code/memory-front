@@ -1,61 +1,28 @@
 <template>
   <v-container class="page-main-container">
-    <v-container class="info-container"> </v-container>
+    <v-container class="info-container"> Вставить картинку или тп </v-container>
     <v-container class="login-input-main-container">
       <v-container class="signin-signup-buttons">
-        <v-container
-          class="button left"
-          :class="{ selected: selectedButton == 1 }"
-          @click="selectedButton = 1"
-        >
+        <v-container class="button left" :class="{ selected: selectedButton == 1 }" @click="selectedButton = 1">
           <p>Вход</p>
         </v-container>
-        <v-container
-          class="button right"
-          :class="{ selected: selectedButton == 2 }"
-          @click="selectedButton = 2"
-        >
+        <v-container class="button right" :class="{ selected: selectedButton == 2 }" @click="selectedButton = 2">
           <p>Регистрация</p>
         </v-container>
       </v-container>
 
       <v-container class="inputs-container" v-if="selectedButton == 2">
-        <ZOVInput
-          class="input"
-          title="Имя пользователя"
-          type="text"
-          placeholder="Крутятский ник"
-          v-model="oblectToSend.name"
-        ></ZOVInput>
-        <ZOVInput
-          class="input"
-          title="Email"
-          type="email"
-          placeholder="Your_email@example.ru"
-          v-model="oblectToSend.email"
-        ></ZOVInput>
-        <ZOVInput
-          class="input"
-          title="Пароль"
-          type="password"
-          placeholder="*********"
-          v-model="oblectToSend.password"
-        ></ZOVInput>
+        <ZOVInput class="input" title="Имя пользователя" type="text" placeholder="логин" v-model="oblectToSend.name">
+        </ZOVInput>
+        <ZOVInput class="input" title="Email" type="email" placeholder="Электронная_почта@example.ru"
+          v-model="oblectToSend.email"></ZOVInput>
+        <ZOVInput class="input" title="Пароль" type="password" placeholder="*********" v-model="oblectToSend.password">
+        </ZOVInput>
       </v-container>
       <v-container class="inputs-container" v-if="selectedButton == 1">
-        <ZOVInput
-          class="input"
-          title="Имя пользователя или Email"
-          type="text"
-          placeholder="Крутятский ник"
-        >
+        <ZOVInput class="input" title="Имя пользователя или Email" type="text" placeholder="Логин">
         </ZOVInput>
-        <ZOVInput
-          class="input"
-          title="Пароль"
-          type="password"
-          placeholder="*********"
-        ></ZOVInput>
+        <ZOVInput class="input" title="Пароль" type="password" placeholder="*********"></ZOVInput>
       </v-container>
       <v-container @click="sendResults" class="button submit-btn">
         <p>Подтвердить</p>
@@ -98,7 +65,7 @@ p {
 }
 
 .info-container {
-  background-color: black;
+  background-color: #000;
   width: 100%;
   height: 100%;
 }
@@ -106,7 +73,7 @@ p {
 .login-input-main-container {
   display: flex;
   flex-direction: column;
-  background-color: #232931;
+  background-color: var(--bg-page);
   min-width: 720px;
   max-width: 720px;
   height: 100%;
@@ -115,9 +82,9 @@ p {
 }
 
 .input {
-  height: 114px;
+  height: 60px;
   width: 480px;
-  margin: 0px auto 0px auto;
+  margin: 10px auto 0px auto;
 }
 
 .signin-signup-buttons {
@@ -128,18 +95,31 @@ p {
 }
 
 .button {
-  cursor: pointer !important;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
-  background-color: #2b323b;
+  background-color: var(--bg-page);
+  transition: all 0.2s ease;
 }
 
-.button.selected {
-  background-color: #232931;
-  font-size: 28px;
+.button:hover {
+  background-color: var(--accent-hover);
+}
+
+button:hover p{
+  color: var(--text-primary)
+}
+
+.button.selected p {
+  color: var(--accent);
+  font-size: 22px;
+}
+
+.button.selected:hover p{
+  color: #fff;
 }
 
 .button.left {

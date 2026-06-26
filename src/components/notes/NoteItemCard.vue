@@ -1,5 +1,5 @@
 <template>
-    <router-link to="/about" v-if="props.isRouter">
+    <router-link :to="`/notes/${props.noteID}`">
         <v-container class="card">{{ props.noteTitle }}</v-container>
     </router-link>
 </template>
@@ -10,9 +10,9 @@ const props = defineProps({
         type: String,
         default: 'Note title'
     },
-    isRouter: {
-        type: Boolean,
-        default: true
+    noteID: {
+        type: String,
+        default: 'newNote'
     },
 })
 

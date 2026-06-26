@@ -2,22 +2,13 @@
   <v-container class="header">
     <v-row align="center">
       <v-col align="left">
-        <v-row>
-          <v-col cols="auto">
-            <v-container class="icon-container">
-              <button class="main-border" @click="switchSideBarState">
-                <v-container class="sidebar-state" :class="{ expanded: sideBarState }">
-                  <v-container></v-container>
-                </v-container>
-              </button>
+        <v-container class="icon-container">
+          <button class="main-border" @click="switchSideBarState">
+            <v-container class="sidebar-state" :class="{ expanded: sideBarState }">
+              <v-container></v-container>
             </v-container>
-          </v-col>
-          <v-col align="left" class="pa-0">
-            <v-container class="burger-text pl-0" :class="{ expanded: sideBarState }">
-              <p>Свернуть меню</p>
-            </v-container>
-          </v-col>
-        </v-row>
+          </button>
+        </v-container>
       </v-col>
 
       <v-col cols="5" class="pa-0">
@@ -105,6 +96,10 @@ function switchSideBarState() {
 
 .main-border:hover .sidebar-state {
   background-color: var(--accent-hover);
+}
+
+.main-border:hover+.hide-side-bar-title {
+  color: var(--accent-hover);
 }
 
 .sidebar-state {

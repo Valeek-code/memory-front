@@ -1,25 +1,23 @@
 <template>
-  <div class="obsidian-editor">
-    <textarea
-      ref="editorRef"
-      v-model="textContent"
-      class="editor-textarea"
-      placeholder="Начните писать..."
-    ></textarea>
-  </div>
+  <v-row class="obsidian-editor">
+    <v-col>
+      <input type="text" name="" id="" class="title mb-4" v-model="title">
+      <textarea ref="editorRef" v-model="textContent" class="editor-textarea pa-4"
+        placeholder="Начните писать..."></textarea>
+    </v-col>
+  </v-row>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, watch, nextTick } from 'vue'
 
-const textContent = ref(`# Добро пожаловать в редактор Obsidian
+const title = ref('Новая заметка')
+
+const textContent = ref(`# Добро пожаловать в редактор Memory
 
 Здесь можно писать текст как в обычном блокноте.
 
 ## Возможности:
-- Полноэкранный режим
-- Один скролл на всю страницу
-- Редактирование как в поле ввода на сайтах
 - Автосохранение
 
 Напишите что-нибудь здесь...`)
@@ -53,53 +51,35 @@ onMounted(() => {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   overflow: hidden;
 }
 
-/* Текстовое поле на весь экран */
+.title {
+  color: var(--text-primary);
+  font-size: 20px;
+  text-align: center;
+}
+
 .editor-textarea {
   width: 100%;
   height: 100vh;
-  background: #1e1e1e;
-  color: #ddd;
-  border: none;
-  padding: 60px 80px;
-  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  color: var(--text-secondary);
   font-size: 16px;
+}
+
+/* Текстовое поле на весь экран */
+.editor-textarea,
+.title {
+  background: var(--bg-card);
+  width: 100%;
+  border: none;
   line-height: 1.6;
   resize: none;
   outline: none;
-  overflow-y: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
 }
-
-/* Стили для скроллбара (как в Obsidian) */
-.editor-textarea::-webkit-scrollbar {
-  width: 8px;
-}
-
-.editor-textarea::-webkit-scrollbar-track {
-  background: #2d2d2d;
-}
-
-.editor-textarea::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 4px;
-}
-
-.editor-textarea::-webkit-scrollbar-thumb:hover {
-  background: #7b62b6;
-}
-
-.editor-textarea::placeholder {
-  color: #555;
-  font-style: italic;
-}
-
-.editor-textarea:focus {
-  outline: none;
-}
-
 </style>

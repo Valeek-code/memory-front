@@ -35,7 +35,7 @@ const props = defineProps({
     },
     textSize: {
         type: Number,
-        default: 24
+        default: 20
     },
     textAlign: {
         type: String,
